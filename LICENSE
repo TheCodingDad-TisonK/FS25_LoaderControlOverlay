@@ -1,20 +1,45 @@
-FS25 Loader Control Overlay
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+
+FS25_LoaderControlOverlay
 Copyright (c) 2026 TisonK and arissani. All rights reserved.
 
-This mod and its source code are provided for personal, non-commercial use
-within Farming Simulator 25.
+This work is licensed under the Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License.
 
-You MAY:
-  - Download and use this mod in your own game (singleplayer or multiplayer).
+You are free to:
+  - Share: copy and redistribute this mod in its original, unmodified form
+    for non-commercial purposes, with proper attribution.
 
-You MAY NOT, without the prior written permission of the authors:
-  - Re-upload or redistribute this mod, in whole or in part, on any platform.
-  - Claim this work, or any part of it, as your own.
-  - Sell, sublicense, or monetize this mod or any derivative of it.
-  - Publish modified versions or extract assets/code for use in other projects.
+Under the following terms:
+  - Attribution: You must give appropriate credit to TisonK and arissani as the
+    original authors, provide a link to this license, and indicate if any changes
+    were made. You may not suggest the licensors endorse you or your use.
+  - NonCommercial: You may not use this mod or any part of it for commercial
+    purposes. Uploading to monetized platforms or behind paywalls is prohibited.
+  - NoDerivatives: If you remix, transform, or build upon this mod, you may
+    not distribute the modified version. Contributions submitted as pull
+    requests to the original repository are explicitly permitted and encouraged.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE
-USE OF THIS SOFTWARE.
+No additional restrictions: You may not apply legal terms or technological
+measures that legally restrict others from doing anything the license permits.
+
+CONTRIBUTIONS
+
+By submitting a pull request or otherwise contributing code or assets to this
+repository, you grant the authors a perpetual, irrevocable, royalty-free license
+to use, modify, and include your contribution in this project. The authors
+retain full copyright over the combined work. Your contribution does not
+transfer ownership of the project or grant you any rights beyond those
+described in this license.
+
+DISCLAIMER
+
+This mod is provided "as is" without warranty of any kind, express or implied.
+The authors are not responsible for any damage to save files, game installations,
+or other software resulting from the use of this mod.
+
+Full license text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+For permissions beyond the scope of this license, contact the authors via
+GitHub: https://github.com/TheCodingDad-TisonK/FS25_LoaderControlOverlay
