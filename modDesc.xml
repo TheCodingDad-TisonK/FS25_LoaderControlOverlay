@@ -75,6 +75,7 @@
         <action name="LCO_EDIT_OVERLAY"   category="ONFOOT" />
         <action name="LCO_CYCLE_SCHEME"   category="ONFOOT" />
         <action name="LCO_CYCLE_POSITION" category="ONFOOT" />
+        <action name="LCO_OPEN_SETTINGS"  category="ONFOOT" />
     </actions>
 
     <inputBinding>
@@ -89,6 +90,9 @@
         </actionBinding>
         <actionBinding action="LCO_CYCLE_POSITION">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_h" />
+        </actionBinding>
+        <actionBinding action="LCO_OPEN_SETTINGS">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_o" />
         </actionBinding>
     </inputBinding>
 
@@ -204,6 +208,37 @@
             <fc>装载机叠加层：切换位置</fc>
             <id>Overlay loader: ganti posisi</id>
             <vi>Lớp phủ máy xúc: đổi vị trí</vi>
+        </text>
+        <text name="input_LCO_OPEN_SETTINGS">
+            <en>Loader overlay: settings</en>
+            <de>Lader-Overlay: Einstellungen</de>
+            <fr>Superposition chargeur : réglages</fr>
+            <nl>Lader-overlay: instellingen</nl>
+            <it>Overlay caricatore: impostazioni</it>
+            <pl>Nakładka ładowacza: ustawienia</pl>
+            <es>Superposición cargador: ajustes</es>
+            <ea>Superposición cargador: ajustes</ea>
+            <pt>Sobreposição carregador: definições</pt>
+            <br>Sobreposição carregador: configurações</br>
+            <ru>Оверлей погрузчика: настройки</ru>
+            <uk>Оверлей навантажувача: налаштування</uk>
+            <cz>Překryv nakladače: nastavení</cz>
+            <hu>Rakodó overlay: beállítások</hu>
+            <ro>Suprapunere încărcător: setări</ro>
+            <tr>Yükleyici katmanı: ayarlar</tr>
+            <fi>Kuormaajan näyttö: asetukset</fi>
+            <no>Lasteroverlegg: innstillinger</no>
+            <sv>Lastaröverlägg: inställningar</sv>
+            <da>Læsseroverlay: indstillinger</da>
+            <kr>로더 오버레이: 설정</kr>
+            <jp>ローダー表示: 設定</jp>
+            <ct>裝載機疊加層：設定</ct>
+            <fc>装载机叠加层：设置</fc>
+            <id>Overlay loader: pengaturan</id>
+            <vi>Lớp phủ máy xúc: cài đặt</vi>
+        </text>
+        <text name="lco_settings">
+            <en>Settings</en><de>Einstellungen</de><fr>Réglages</fr><nl>Instellingen</nl><it>Impostazioni</it><pl>Ustawienia</pl><es>Ajustes</es><ea>Ajustes</ea><pt>Definições</pt><br>Configurações</br><ru>Настройки</ru><uk>Налаштування</uk><cz>Nastavení</cz><hu>Beállítások</hu><ro>Setări</ro><tr>Ayarlar</tr><fi>Asetukset</fi><no>Innstillinger</no><sv>Inställningar</sv><da>Indstillinger</da><kr>설정</kr><jp>設定</jp><ct>設定</ct><fc>设置</fc><id>Pengaturan</id><vi>Cài đặt</vi>
         </text>
         <text name="lco_title">
             <en>Loader Control</en>
