@@ -59,7 +59,11 @@ function LCOManager:draw()
 end
 
 function LCOManager:delete()
-    -- restore the hooked class method
+    -- restore the hooked class methods
+    if self._playerHookOriginal and PlayerInputComponent then
+        PlayerInputComponent.registerActionEvents = self._playerHookOriginal
+        self._playerHookOriginal = nil
+    end
     if self._vehicleHookOriginal and InputBinding then
         InputBinding.endActionEventsModification = self._vehicleHookOriginal
         self._vehicleHookOriginal = nil
@@ -69,18 +73,26 @@ function LCOManager:delete()
     LCOLogger.info("Manager deleted")
 end
 
--- ── Input registration (VEHICLE context only) ────────────
--- The overlay only matters while driving, so we register our hotkeys in
--- the VEHICLE input context. We purge our own previously-registered IDs
--- first so repeated context closes (seat changes, remounts) never stack
--- duplicate callbacks. Pattern adapted from FS25_SoilFertilizer.
+-- ── Input registration ───────────────────────────────────
+-- The overlay only matters while driving, so the toggle/edit/cycle keys
+-- live in the VEHICLE context. The settings panel is also useful on foot,
+-- so LCO_OPEN_SETTINGS is additionally registered in the PLAYER context.
+-- We purge our own IDs before each re-registration so repeated context
+-- closes (seat changes, remounts) never stack duplicate callbacks.
+-- Pattern adapted from FS25_SoilFertilizer.
 function LCOManager:purgeEvents(binding)
-    if self._eventIds then
-        for _, id in ipairs(self._eventIds) do
+    if self._vehicleIds then
+        for _, id in ipairs(self._vehicleIds) do
             pcall(function() binding:removeActionEvent(id) end)
         end
     end
-    self._eventIds = {}
+    self._vehicleIds = {}
+    -- Removing the vehicle LCO_OPEN_SETTINGS slot can invalidate the PLAYER
+    -- slot for the same action, so drop and re-register it too.
+    if self._playerSettingsId then
+        pcall(function() binding:removeActionEvent(self._playerSettingsId) end)
+        self._playerSettingsId = nil
+    end
 end
 
 function LCOManager:registerVehicleActions(binding)
@@ -89,7 +101,7 @@ function LCOManager:registerVehicleActions(binding)
         local ok, id = binding:registerActionEvent(InputAction[action], self, cb, false, true, false, true)
         if ok and id then
             binding:setActionEventTextVisibility(id, false)
-            self._eventIds[#self._eventIds + 1] = id
+            self._vehicleIds[#self._vehicleIds + 1] = id
         end
     end
     reg("LCO_TOGGLE_OVERLAY", self.onToggleOverlay)
@@ -99,37 +111,65 @@ function LCOManager:registerVehicleActions(binding)
     reg("LCO_OPEN_SETTINGS",  self.onOpenSettings)
 end
 
+-- Settings panel only — registered in the PLAYER (on-foot) context.
+function LCOManager:registerPlayerSettings(binding)
+    if InputAction.LCO_OPEN_SETTINGS == nil then return end
+    local ok, id = binding:registerActionEvent(InputAction.LCO_OPEN_SETTINGS, self, self.onOpenSettings, false, true, false, true)
+    if ok and id then
+        binding:setActionEventTextVisibility(id, false)
+        self._playerSettingsId = id
+    end
+end
+
 function LCOManager:installInputHooks()
-    if not (InputBinding and InputBinding.endActionEventsModification) then
-        LCOLogger.warning("InputBinding unavailable — hotkeys disabled (console commands still work)")
-        return
-    end
-    if self._vehicleHookOriginal then return end
-
-    local origEnd = InputBinding.endActionEventsModification
-    self._vehicleHookOriginal = origEnd
-    local reentry = false
-    InputBinding.endActionEventsModification = function(binding, ignoreCheck)
-        -- Capture context BEFORE origEnd resets it.
-        local contextName = ""
-        if binding.registrationContext and binding.registrationContext ~= InputBinding.NO_REGISTRATION_CONTEXT then
-            contextName = binding.registrationContext.name or ""
+    -- PLAYER context: fires when the on-foot input context is created.
+    -- Registers only the settings hotkey so Alt+O works on foot.
+    if PlayerInputComponent and PlayerInputComponent.registerActionEvents and not self._playerHookOriginal then
+        local orig = PlayerInputComponent.registerActionEvents
+        self._playerHookOriginal = orig
+        PlayerInputComponent.registerActionEvents = function(inputComponent, ...)
+            orig(inputComponent, ...)
+            if not (inputComponent.player and inputComponent.player.isOwner) then return end
+            local mgr = g_LoaderControlManager
+            if not mgr or mgr._playerSettingsId then return end
+            g_inputBinding:beginActionEventsModification(PlayerInputComponent.INPUT_CONTEXT_NAME)
+            mgr:registerPlayerSettings(g_inputBinding)
+            g_inputBinding:endActionEventsModification()
         end
-        origEnd(binding, ignoreCheck)
-
-        if contextName ~= Vehicle.INPUT_CONTEXT_NAME then return end
-        if reentry then return end
-        local mgr = g_LoaderControlManager
-        if not mgr then return end
-
-        reentry = true
-        mgr:purgeEvents(binding)
-        binding:beginActionEventsModification(Vehicle.INPUT_CONTEXT_NAME)
-        mgr:registerVehicleActions(binding)
-        binding:endActionEventsModification()   -- routes here again; reentry guard returns early
-        reentry = false
+        LCOLogger.info("Player input hook installed (settings)")
     end
-    LCOLogger.info("Vehicle input hook installed")
+
+    -- VEHICLE context: fires on every vehicle context close.
+    if InputBinding and InputBinding.endActionEventsModification and not self._vehicleHookOriginal then
+        local origEnd = InputBinding.endActionEventsModification
+        self._vehicleHookOriginal = origEnd
+        local reentry = false
+        InputBinding.endActionEventsModification = function(binding, ignoreCheck)
+            local contextName = ""
+            if binding.registrationContext and binding.registrationContext ~= InputBinding.NO_REGISTRATION_CONTEXT then
+                contextName = binding.registrationContext.name or ""
+            end
+            origEnd(binding, ignoreCheck)
+
+            if contextName ~= Vehicle.INPUT_CONTEXT_NAME then return end
+            if reentry then return end
+            local mgr = g_LoaderControlManager
+            if not mgr then return end
+
+            reentry = true
+            mgr:purgeEvents(binding)
+            binding:beginActionEventsModification(Vehicle.INPUT_CONTEXT_NAME)
+            mgr:registerVehicleActions(binding)
+            binding:endActionEventsModification()
+            -- Re-assert the PLAYER settings slot (invalidated by the purge above),
+            -- so Alt+O keeps working after you step out of the vehicle.
+            binding:beginActionEventsModification(PlayerInputComponent.INPUT_CONTEXT_NAME)
+            mgr:registerPlayerSettings(binding)
+            binding:endActionEventsModification()
+            reentry = false
+        end
+        LCOLogger.info("Vehicle input hook installed")
+    end
 end
 
 -- ── Input callbacks ──────────────────────────────────────

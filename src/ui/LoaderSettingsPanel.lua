@@ -27,7 +27,7 @@ end
 
 -- ── Panel geometry (normalized, Y=0 at bottom) ───────────
 local PW    = 0.44
-local PH    = 0.60
+local PH    = 0.68
 local PX    = (1 - PW) / 2
 local PY    = (1 - PH) / 2
 
@@ -35,8 +35,8 @@ local TB_H  = 0.050
 local IB_H  = 0.040
 local PAD   = 0.020
 
-local ROW_H     = 0.044
-local SEC_H     = 0.030
+local ROW_H     = 0.042
+local SEC_H     = 0.028
 local TOGGLE_W  = 0.050
 local TOGGLE_H  = 0.028
 local TOGGLE_GAP = 0.004
