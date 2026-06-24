@@ -328,7 +328,7 @@ function LCOSettingsPanel:drawRow(x, y, w, item, rowIdx)
     end
 
     self:drawText(x + 0.006, y + ROW_H * 0.55, TS_BODY, tr(item.label, item.lf), C.white, RenderText.ALIGN_LEFT, true)
-    self:drawText(x + 0.006, y + ROW_H * 0.16, TS_TINY, item.desc, C.dim, RenderText.ALIGN_LEFT, false)
+    self:drawText(x + 0.006, y + ROW_H * 0.16, TS_TINY, tr("lco_desc_" .. item.id, item.desc), C.dim, RenderText.ALIGN_LEFT, false)
 
     local ctrlX = x + w - 0.010
     local ctrlY = y + (ROW_H - TOGGLE_H) / 2

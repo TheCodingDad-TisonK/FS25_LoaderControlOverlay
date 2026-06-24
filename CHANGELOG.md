@@ -15,6 +15,7 @@ All notable changes to FS25 Loader Control Overlay are documented here.
 - Edit mode: drag to move, drag the corner to resize; layout saved per player.
 - Position presets, scale, style override, and toggles for the brand badge,
   vehicle name, and position fill.
-- Hotkeys (Alt+L / Alt+K / Alt+J / Alt+H) and a full set of console commands.
+- In-game settings panel (Alt+O) with all options grouped and saved per player.
+- Hotkeys (Alt+L / Alt+K / Alt+J / Alt+H / Alt+O) and a full set of console commands.
 - Client-side and multiplayer-friendly. No gameplay changes, no dependencies.
 - 26-language localization.
