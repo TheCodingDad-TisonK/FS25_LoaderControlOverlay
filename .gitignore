@@ -1,0 +1,12 @@
+# Build artifact (shipped as a release asset, never committed)
+FS25_LoaderControlOverlay.zip
+*.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+
+# Icon working file (only the final icon.dds is shipped)
+icon_source.png

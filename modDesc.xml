@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="108">
+    <author>TisonK and arissani</author>
+    <version>1.0.0.0</version>
+    <modName>FS25_LoaderControlOverlay</modName>
+
+    <title>
+        <en>Loader Control Overlay</en>
+        <de>Lader-Steuerungs-Overlay</de>
+        <fr>Superposition de Commandes du Chargeur</fr>
+        <nl>Lader Bediening Overlay</nl>
+        <it>Overlay Comandi Caricatore</it>
+        <pl>Nakładka Sterowania Ładowaczem</pl>
+        <es>Superposición de Control del Cargador</es>
+        <ea>Superposición de Control del Cargador</ea>
+        <pt>Sobreposição de Controlo do Carregador</pt>
+        <br>Sobreposição de Controle do Carregador</br>
+        <ru>Оверлей управления погрузчиком</ru>
+        <uk>Оверлей керування навантажувачем</uk>
+        <cz>Překryv ovládání nakladače</cz>
+        <hu>Rakodó Vezérlés Overlay</hu>
+        <ro>Suprapunere Control Încărcător</ro>
+        <tr>Yükleyici Kontrol Katmanı</tr>
+        <fi>Kuormaajan Ohjausnäyttö</fi>
+        <no>Lasterkontroll-Overlegg</no>
+        <sv>Lastarkontroll-Överlägg</sv>
+        <da>Læsserkontrol-Overlay</da>
+        <kr>로더 컨트롤 오버레이</kr>
+        <jp>ローダー操作オーバーレイ</jp>
+        <ct>裝載機控制疊加層</ct>
+        <fc>装载机控制叠加层</fc>
+        <id>Overlay Kontrol Loader</id>
+        <vi>Lớp Phủ Điều Khiển Máy Xúc</vi>
+    </title>
+
+    <description>
+        <en>A dynamic on-screen overlay that displays your tractor's front loader controls and animates them live as you raise, lower, curl and dump. The control style adapts to the vehicle brand - Modern joystick, Classic levers or Paddle - and shows the authentic brand badge. Client-side HUD, multiplayer friendly, drag to reposition, fully configurable.</en>
+        <de>Ein dynamisches Bildschirm-Overlay, das die Frontlader-Steuerung deines Traktors anzeigt und in Echtzeit animiert, während du hebst, senkst, kippst und entleerst. Der Steuerstil passt sich der Fahrzeugmarke an - Moderner Joystick, Klassische Hebel oder Paddel - und zeigt das echte Markenlogo. Client-seitiges HUD, mehrspielertauglich, verschiebbar, voll konfigurierbar.</de>
+        <fr>Une superposition dynamique à l'écran qui affiche les commandes du chargeur frontal de votre tracteur et les anime en temps réel lorsque vous levez, abaissez, cavez et videz. Le style de commande s'adapte à la marque du véhicule - Joystick moderne, Leviers classiques ou Palette - avec le logo authentique de la marque. HUD côté client, compatible multijoueur, repositionnable, entièrement configurable.</fr>
+        <nl>Een dynamische overlay die de voorlader-bediening van je tractor toont en live animeert terwijl je heft, daalt, kantelt en lost. De bedieningsstijl past zich aan het merk aan - Modern joystick, Klassieke hendels of Paddle - met het echte merklogo. Client-side HUD, multiplayer-vriendelijk, versleepbaar, volledig instelbaar.</nl>
+        <it>Un overlay dinamico che mostra i comandi del caricatore frontale del tuo trattore e li anima in tempo reale mentre sollevi, abbassi, arricci e scarichi. Lo stile dei comandi si adatta alla marca del veicolo - Joystick moderno, Leve classiche o Paletta - con il logo autentico della marca. HUD lato client, compatibile multiplayer, trascinabile, completamente configurabile.</it>
+        <pl>Dynamiczna nakładka ekranowa pokazująca sterowanie ładowaczem czołowym twojego ciągnika i animująca je na żywo podczas podnoszenia, opuszczania, pochylania i wysypywania. Styl sterowania dopasowuje się do marki pojazdu - Nowoczesny joystick, Klasyczne dźwignie lub Manetka - z autentycznym logo marki. HUD po stronie klienta, tryb wieloosobowy, przeciągalny, w pełni konfigurowalny.</pl>
+        <es>Una superposición dinámica que muestra los controles del cargador frontal de tu tractor y los anima en vivo mientras subes, bajas, inclinas y descargas. El estilo de control se adapta a la marca del vehículo - Joystick moderno, Palancas clásicas o Paleta - con el logo auténtico de la marca. HUD del lado del cliente, compatible con multijugador, arrastrable, totalmente configurable.</es>
+        <ea>Una superposición dinámica que muestra los controles del cargador frontal de tu tractor y los anima en vivo mientras subes, bajas, inclinas y descargas. El estilo de control se adapta a la marca del vehículo - Joystick moderno, Palancas clásicas o Paleta - con el logo auténtico de la marca. HUD del lado del cliente, compatible con multijugador, arrastrable, totalmente configurable.</ea>
+        <pt>Uma sobreposição dinâmica que mostra os comandos do carregador frontal do teu tractor e os anima ao vivo enquanto sobes, desces, inclinas e descarregas. O estilo de comando adapta-se à marca do veículo - Joystick moderno, Alavancas clássicas ou Patilha - com o logótipo autêntico da marca. HUD do lado do cliente, compatível com multijogador, arrastável, totalmente configurável.</pt>
+        <br>Uma sobreposição dinâmica que mostra os controles do carregador frontal do seu trator e os anima ao vivo enquanto você levanta, abaixa, inclina e descarrega. O estilo de controle se adapta à marca do veículo - Joystick moderno, Alavancas clássicas ou Manete - com o logotipo autêntico da marca. HUD do lado do cliente, compatível com multijogador, arrastável, totalmente configurável.</br>
+        <ru>Динамический экранный оверлей, который показывает управление фронтальным погрузчиком вашего трактора и анимирует его в реальном времени при подъёме, опускании, наклоне и разгрузке. Стиль управления подстраивается под марку техники - Современный джойстик, Классические рычаги или Клавиша - с подлинным логотипом бренда. HUD на стороне клиента, поддержка мультиплеера, перетаскивается, полностью настраивается.</ru>
+        <uk>Динамічний екранний оверлей, що показує керування фронтальним навантажувачем вашого трактора й анімує його в реальному часі під час підйому, опускання, нахилу та розвантаження. Стиль керування підлаштовується під марку техніки - Сучасний джойстик, Класичні важелі або Клавіша - зі справжнім логотипом бренду. HUD на боці клієнта, підтримка мультиплеєра, перетягується, повністю налаштовується.</uk>
+        <cz>Dynamický překryv obrazovky, který zobrazuje ovládání čelního nakladače vašeho traktoru a animuje je živě při zvedání, spouštění, naklápění a vyklápění. Styl ovládání se přizpůsobuje značce vozidla - Moderní joystick, Klasické páky nebo Pádlo - se skutečným logem značky. HUD na straně klienta, vhodné pro více hráčů, přetažitelné, plně konfigurovatelné.</cz>
+        <hu>Dinamikus képernyő-overlay, amely megjeleníti a traktor homlokrakodójának vezérlését, és élőben animálja, ahogy emelsz, süllyesztsz, döntesz és ürítesz. A vezérlési stílus a jármű márkájához igazodik - Modern joystick, Klasszikus karok vagy Lapát - valódi márkajelzéssel. Kliensoldali HUD, többjátékos-barát, áthelyezhető, teljesen testreszabható.</hu>
+        <ro>O suprapunere dinamică pe ecran care afișează comenzile încărcătorului frontal al tractorului tău și le animă în timp real în timp ce ridici, cobori, înclini și descarci. Stilul comenzilor se adaptează la marca vehiculului - Joystick modern, Manete clasice sau Paletă - cu emblema autentică a mărcii. HUD pe partea clientului, compatibil multiplayer, mutabil, complet configurabil.</ro>
+        <tr>Traktörünüzün ön yükleyici kontrollerini gösteren ve siz kaldırırken, indirirken, kıvırırken ve boşaltırken canlı olarak canlandıran dinamik bir ekran katmanı. Kontrol stili araç markasına uyum sağlar - Modern joystick, Klasik kollar veya Palet - gerçek marka rozetiyle. İstemci tarafı HUD, çok oyunculu uyumlu, sürüklenebilir, tamamen yapılandırılabilir.</tr>
+        <fi>Dynaaminen näyttöpäällys, joka näyttää traktorisi etukuormaajan hallintalaitteet ja animoi niitä reaaliajassa kun nostat, lasket, kallistat ja tyhjennät. Ohjaustyyli mukautuu ajoneuvon merkkiin - Moderni ohjaussauva, Klassiset vivut tai Mela - aidolla merkkitunnuksella. Asiakaspuolen HUD, moninpeliystävällinen, siirrettävä, täysin säädettävä.</fi>
+        <no>Et dynamisk skjermoverlegg som viser frontlasterens kontroller på traktoren din og animerer dem live mens du løfter, senker, tilter og tømmer. Kontrollstilen tilpasser seg kjøretøymerket - Moderne joystick, Klassiske spaker eller Padle - med ekte merkelogo. Klientsidig HUD, flerspillervennlig, flyttbar, fullt konfigurerbar.</no>
+        <sv>Ett dynamiskt skärmövertäckning som visar din traktors frontlastarkontroller och animerar dem live medan du lyfter, sänker, tippar och tömmer. Kontrollstilen anpassas till fordonsmärket - Modern joystick, Klassiska spakar eller Paddel - med äkta märkeslogga. Klientsidig HUD, flerspelarvänlig, flyttbar, helt konfigurerbar.</sv>
+        <da>En dynamisk skærmoverlay, der viser din traktors frontlæsser-kontroller og animerer dem live, mens du løfter, sænker, vipper og tømmer. Kontrolstilen tilpasser sig køretøjsmærket - Moderne joystick, Klassiske håndtag eller Paddel - med ægte mærkelogo. Klientsidig HUD, flerspiller-venlig, flytbar, fuldt konfigurerbar.</da>
+        <kr>트랙터 프론트 로더의 조작계를 화면에 표시하고, 들어 올리고 내리고 말아 올리고 쏟을 때 실시간으로 애니메이션하는 동적 오버레이입니다. 조작 스타일은 차량 브랜드에 맞춰 변합니다 - 모던 조이스틱, 클래식 레버, 패들 - 실제 브랜드 배지와 함께. 클라이언트 측 HUD, 멀티플레이어 지원, 드래그로 이동, 완전히 설정 가능.</kr>
+        <jp>トラクターのフロントローダー操作系を画面に表示し、上げ・下げ・チルト・排出に合わせてリアルタイムにアニメーションする動的オーバーレイです。操作スタイルは車両ブランドに合わせて変化します - モダンジョイスティック、クラシックレバー、パドル - 本物のブランドバッジ付き。クライアント側HUD、マルチプレイ対応、ドラッグで移動、フル設定可能。</jp>
+        <ct>動態螢幕疊加層，顯示您拖拉機前裝載機的操作介面，並在您升起、降下、捲動與傾卸時即時動畫呈現。操作風格會依車輛品牌調整 - 現代搖桿、經典操縱桿或撥桿 - 並顯示真實品牌標誌。用戶端 HUD、支援多人遊戲、可拖曳移動、完全可設定。</ct>
+        <fc>动态屏幕叠加层，显示您拖拉机前装载机的操作界面，并在您升起、降下、卷动与倾卸时实时动画呈现。操作风格会依车辆品牌调整 - 现代摇杆、经典操纵杆或拨杆 - 并显示真实品牌标志。客户端 HUD、支持多人游戏、可拖拽移动、完全可设置。</fc>
+        <id>Overlay layar dinamis yang menampilkan kontrol loader depan traktor Anda dan menganimasikannya secara langsung saat Anda mengangkat, menurunkan, menggulung, dan membuang. Gaya kontrol menyesuaikan dengan merek kendaraan - Joystick modern, Tuas klasik, atau Paddle - dengan lencana merek asli. HUD sisi klien, ramah multipemain, dapat digeser, sepenuhnya dapat dikonfigurasi.</id>
+        <vi>Lớp phủ động trên màn hình hiển thị các điều khiển máy xúc trước của máy kéo và tạo hoạt ảnh trực tiếp khi bạn nâng, hạ, cuộn và đổ. Phong cách điều khiển thích ứng theo hãng xe - Cần điều khiển hiện đại, Cần gạt cổ điển hoặc Bàn đạp - với phù hiệu hãng chính hãng. HUD phía máy khách, hỗ trợ nhiều người chơi, kéo để di chuyển, tùy chỉnh hoàn toàn.</vi>
+    </description>
+
+    <iconFilename>icon.dds</iconFilename>
+
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="src/main.lua" />
+    </extraSourceFiles>
+
+    <actions>
+        <action name="LCO_TOGGLE_OVERLAY" category="ONFOOT" />
+        <action name="LCO_EDIT_OVERLAY"   category="ONFOOT" />
+        <action name="LCO_CYCLE_SCHEME"   category="ONFOOT" />
+        <action name="LCO_CYCLE_POSITION" category="ONFOOT" />
+    </actions>
+
+    <inputBinding>
+        <actionBinding action="LCO_TOGGLE_OVERLAY">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_l" />
+        </actionBinding>
+        <actionBinding action="LCO_EDIT_OVERLAY">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_k" />
+        </actionBinding>
+        <actionBinding action="LCO_CYCLE_SCHEME">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_j" />
+        </actionBinding>
+        <actionBinding action="LCO_CYCLE_POSITION">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_h" />
+        </actionBinding>
+    </inputBinding>
+
+    <l10n>
+        <text name="input_LCO_TOGGLE_OVERLAY">
+            <en>Loader overlay: show/hide</en>
+            <de>Lader-Overlay: ein/aus</de>
+            <fr>Superposition chargeur : afficher/masquer</fr>
+            <nl>Lader-overlay: tonen/verbergen</nl>
+            <it>Overlay caricatore: mostra/nascondi</it>
+            <pl>Nakładka ładowacza: pokaż/ukryj</pl>
+            <es>Superposición cargador: mostrar/ocultar</es>
+            <ea>Superposición cargador: mostrar/ocultar</ea>
+            <pt>Sobreposição carregador: mostrar/ocultar</pt>
+            <br>Sobreposição carregador: mostrar/ocultar</br>
+            <ru>Оверлей погрузчика: показать/скрыть</ru>
+            <uk>Оверлей навантажувача: показати/сховати</uk>
+            <cz>Překryv nakladače: zobrazit/skrýt</cz>
+            <hu>Rakodó overlay: be/ki</hu>
+            <ro>Suprapunere încărcător: arată/ascunde</ro>
+            <tr>Yükleyici katmanı: göster/gizle</tr>
+            <fi>Kuormaajan näyttö: näytä/piilota</fi>
+            <no>Lasteroverlegg: vis/skjul</no>
+            <sv>Lastaröverlägg: visa/dölj</sv>
+            <da>Læsseroverlay: vis/skjul</da>
+            <kr>로더 오버레이: 표시/숨김</kr>
+            <jp>ローダー表示: 表示/非表示</jp>
+            <ct>裝載機疊加層：顯示/隱藏</ct>
+            <fc>装载机叠加层：显示/隐藏</fc>
+            <id>Overlay loader: tampil/sembunyi</id>
+            <vi>Lớp phủ máy xúc: hiện/ẩn</vi>
+        </text>
+        <text name="input_LCO_EDIT_OVERLAY">
+            <en>Loader overlay: move/resize</en>
+            <de>Lader-Overlay: verschieben/skalieren</de>
+            <fr>Superposition chargeur : déplacer/redimensionner</fr>
+            <nl>Lader-overlay: verplaatsen/schalen</nl>
+            <it>Overlay caricatore: sposta/ridimensiona</it>
+            <pl>Nakładka ładowacza: przesuń/skaluj</pl>
+            <es>Superposición cargador: mover/escalar</es>
+            <ea>Superposición cargador: mover/escalar</ea>
+            <pt>Sobreposição carregador: mover/redimensionar</pt>
+            <br>Sobreposição carregador: mover/redimensionar</br>
+            <ru>Оверлей погрузчика: переместить/масштаб</ru>
+            <uk>Оверлей навантажувача: перемістити/масштаб</uk>
+            <cz>Překryv nakladače: přesunout/zvětšit</cz>
+            <hu>Rakodó overlay: mozgatás/átméretezés</hu>
+            <ro>Suprapunere încărcător: mută/redimensionează</ro>
+            <tr>Yükleyici katmanı: taşı/boyutlandır</tr>
+            <fi>Kuormaajan näyttö: siirrä/skaalaa</fi>
+            <no>Lasteroverlegg: flytt/skaler</no>
+            <sv>Lastaröverlägg: flytta/skala</sv>
+            <da>Læsseroverlay: flyt/skalér</da>
+            <kr>로더 오버레이: 이동/크기조절</kr>
+            <jp>ローダー表示: 移動/サイズ変更</jp>
+            <ct>裝載機疊加層：移動/縮放</ct>
+            <fc>装载机叠加层：移动/缩放</fc>
+            <id>Overlay loader: pindah/ubah ukuran</id>
+            <vi>Lớp phủ máy xúc: di chuyển/đổi cỡ</vi>
+        </text>
+        <text name="input_LCO_CYCLE_SCHEME">
+            <en>Loader overlay: cycle style</en>
+            <de>Lader-Overlay: Stil wechseln</de>
+            <fr>Superposition chargeur : changer de style</fr>
+            <nl>Lader-overlay: stijl wisselen</nl>
+            <it>Overlay caricatore: cambia stile</it>
+            <pl>Nakładka ładowacza: zmień styl</pl>
+            <es>Superposición cargador: cambiar estilo</es>
+            <ea>Superposición cargador: cambiar estilo</ea>
+            <pt>Sobreposição carregador: mudar estilo</pt>
+            <br>Sobreposição carregador: mudar estilo</br>
+            <ru>Оверлей погрузчика: сменить стиль</ru>
+            <uk>Оверлей навантажувача: змінити стиль</uk>
+            <cz>Překryv nakladače: změnit styl</cz>
+            <hu>Rakodó overlay: stílus váltás</hu>
+            <ro>Suprapunere încărcător: schimbă stilul</ro>
+            <tr>Yükleyici katmanı: stil değiştir</tr>
+            <fi>Kuormaajan näyttö: vaihda tyyli</fi>
+            <no>Lasteroverlegg: bytt stil</no>
+            <sv>Lastaröverlägg: byt stil</sv>
+            <da>Læsseroverlay: skift stil</da>
+            <kr>로더 오버레이: 스타일 전환</kr>
+            <jp>ローダー表示: スタイル切替</jp>
+            <ct>裝載機疊加層：切換樣式</ct>
+            <fc>装载机叠加层：切换样式</fc>
+            <id>Overlay loader: ganti gaya</id>
+            <vi>Lớp phủ máy xúc: đổi kiểu</vi>
+        </text>
+        <text name="input_LCO_CYCLE_POSITION">
+            <en>Loader overlay: cycle position</en>
+            <de>Lader-Overlay: Position wechseln</de>
+            <fr>Superposition chargeur : changer de position</fr>
+            <nl>Lader-overlay: positie wisselen</nl>
+            <it>Overlay caricatore: cambia posizione</it>
+            <pl>Nakładka ładowacza: zmień pozycję</pl>
+            <es>Superposición cargador: cambiar posición</es>
+            <ea>Superposición cargador: cambiar posición</ea>
+            <pt>Sobreposição carregador: mudar posição</pt>
+            <br>Sobreposição carregador: mudar posição</br>
+            <ru>Оверлей погрузчика: сменить позицию</ru>
+            <uk>Оверлей навантажувача: змінити позицію</uk>
+            <cz>Překryv nakladače: změnit pozici</cz>
+            <hu>Rakodó overlay: pozíció váltás</hu>
+            <ro>Suprapunere încărcător: schimbă poziția</ro>
+            <tr>Yükleyici katmanı: konum değiştir</tr>
+            <fi>Kuormaajan näyttö: vaihda sijainti</fi>
+            <no>Lasteroverlegg: bytt posisjon</no>
+            <sv>Lastaröverlägg: byt position</sv>
+            <da>Læsseroverlay: skift position</da>
+            <kr>로더 오버레이: 위치 전환</kr>
+            <jp>ローダー表示: 位置切替</jp>
+            <ct>裝載機疊加層：切換位置</ct>
+            <fc>装载机叠加层：切换位置</fc>
+            <id>Overlay loader: ganti posisi</id>
+            <vi>Lớp phủ máy xúc: đổi vị trí</vi>
+        </text>
+        <text name="lco_title">
+            <en>Loader Control</en>
+            <de>Ladersteuerung</de>
+            <fr>Commandes Chargeur</fr>
+            <nl>Laderbediening</nl>
+            <it>Comandi Caricatore</it>
+            <pl>Sterowanie Ładowaczem</pl>
+            <es>Control del Cargador</es>
+            <ea>Control del Cargador</ea>
+            <pt>Controlo do Carregador</pt>
+            <br>Controle do Carregador</br>
+            <ru>Управление погрузчиком</ru>
+            <uk>Керування навантажувачем</uk>
+            <cz>Ovládání nakladače</cz>
+            <hu>Rakodó vezérlés</hu>
+            <ro>Control Încărcător</ro>
+            <tr>Yükleyici Kontrolü</tr>
+            <fi>Kuormaajan ohjaus</fi>
+            <no>Lasterkontroll</no>
+            <sv>Lastarkontroll</sv>
+            <da>Læsserkontrol</da>
+            <kr>로더 컨트롤</kr>
+            <jp>ローダー操作</jp>
+            <ct>裝載機控制</ct>
+            <fc>装载机控制</fc>
+            <id>Kontrol Loader</id>
+            <vi>Điều Khiển Máy Xúc</vi>
+        </text>
+        <text name="lco_no_loader">
+            <en>No loader attached</en>
+            <de>Kein Lader angebaut</de>
+            <fr>Aucun chargeur attelé</fr>
+            <nl>Geen lader bevestigd</nl>
+            <it>Nessun caricatore collegato</it>
+            <pl>Brak podłączonego ładowacza</pl>
+            <es>Sin cargador acoplado</es>
+            <ea>Sin cargador acoplado</ea>
+            <pt>Sem carregador acoplado</pt>
+            <br>Sem carregador acoplado</br>
+            <ru>Погрузчик не присоединён</ru>
+            <uk>Навантажувач не приєднано</uk>
+            <cz>Není připojen nakladač</cz>
+            <hu>Nincs rakodó csatlakoztatva</hu>
+            <ro>Niciun încărcător atașat</ro>
+            <tr>Yükleyici takılı değil</tr>
+            <fi>Kuormaajaa ei kytketty</fi>
+            <no>Ingen laster montert</no>
+            <sv>Ingen lastare monterad</sv>
+            <da>Ingen læsser monteret</da>
+            <kr>로더가 장착되지 않음</kr>
+            <jp>ローダー未装着</jp>
+            <ct>未安裝裝載機</ct>
+            <fc>未安装装载机</fc>
+            <id>Tidak ada loader terpasang</id>
+            <vi>Chưa gắn máy xúc</vi>
+        </text>
+        <text name="lco_edit_hint">
+            <en>Drag to move - corner to resize - RMB to finish</en>
+            <de>Ziehen zum Bewegen - Ecke zum Skalieren - RMT zum Beenden</de>
+            <fr>Glisser pour déplacer - coin pour redimensionner - clic droit pour terminer</fr>
+            <nl>Sleep om te verplaatsen - hoek om te schalen - RMK om te stoppen</nl>
+            <it>Trascina per spostare - angolo per ridimensionare - tasto destro per finire</it>
+            <pl>Przeciągnij aby przesunąć - róg aby skalować - PPM aby zakończyć</pl>
+            <es>Arrastra para mover - esquina para escalar - clic derecho para terminar</es>
+            <ea>Arrastra para mover - esquina para escalar - clic derecho para terminar</ea>
+            <pt>Arrasta para mover - canto para redimensionar - botão direito para terminar</pt>
+            <br>Arraste para mover - canto para redimensionar - botão direito para terminar</br>
+            <ru>Перетащите для перемещения - угол для масштаба - ПКМ для завершения</ru>
+            <uk>Перетягніть для переміщення - кут для масштабу - ПКМ для завершення</uk>
+            <cz>Táhněte pro přesun - roh pro změnu velikosti - PTM pro dokončení</cz>
+            <hu>Húzd a mozgatáshoz - sarok az átméretezéshez - jobb gomb a befejezéshez</hu>
+            <ro>Trage pentru a muta - colț pentru redimensionare - clic dreapta pentru a termina</ro>
+            <tr>Taşımak için sürükle - boyutlandırmak için köşe - bitirmek için sağ tık</tr>
+            <fi>Vedä siirtääksesi - kulma skaalataksesi - oikea painike lopettaaksesi</fi>
+            <no>Dra for å flytte - hjørne for å skalere - høyreklikk for å avslutte</no>
+            <sv>Dra för att flytta - hörn för att skala - högerklick för att avsluta</sv>
+            <da>Træk for at flytte - hjørne for at skalere - højreklik for at afslutte</da>
+            <kr>드래그하여 이동 - 모서리로 크기 조절 - 우클릭으로 완료</kr>
+            <jp>ドラッグで移動 - 角でサイズ変更 - 右クリックで終了</jp>
+            <ct>拖曳移動 - 角落縮放 - 右鍵完成</ct>
+            <fc>拖拽移动 - 角落缩放 - 右键完成</fc>
+            <id>Seret untuk memindah - sudut untuk ubah ukuran - klik kanan untuk selesai</id>
+            <vi>Kéo để di chuyển - góc để đổi cỡ - chuột phải để kết thúc</vi>
+        </text>
+        <text name="lco_on">
+            <en>ON</en><de>EIN</de><fr>ACTIVÉ</fr><nl>AAN</nl><it>ON</it><pl>WŁ</pl><es>ON</es><ea>ON</ea><pt>LIGADO</pt><br>LIGADO</br><ru>ВКЛ</ru><uk>УВІМК</uk><cz>ZAP</cz><hu>BE</hu><ro>PORNIT</ro><tr>AÇIK</tr><fi>PÄÄLLÄ</fi><no>PÅ</no><sv>PÅ</sv><da>TIL</da><kr>켜짐</kr><jp>オン</jp><ct>開啟</ct><fc>开启</fc><id>NYALA</id><vi>BẬT</vi>
+        </text>
+        <text name="lco_off">
+            <en>OFF</en><de>AUS</de><fr>DÉSACTIVÉ</fr><nl>UIT</nl><it>OFF</it><pl>WYŁ</pl><es>OFF</es><ea>OFF</ea><pt>DESLIGADO</pt><br>DESLIGADO</br><ru>ВЫКЛ</ru><uk>ВИМК</uk><cz>VYP</cz><hu>KI</hu><ro>OPRIT</ro><tr>KAPALI</tr><fi>POIS</fi><no>AV</no><sv>AV</sv><da>FRA</da><kr>꺼짐</kr><jp>オフ</jp><ct>關閉</ct><fc>关闭</fc><id>MATI</id><vi>TẮT</vi>
+        </text>
+        <text name="lco_scheme">
+            <en>Style</en><de>Stil</de><fr>Style</fr><nl>Stijl</nl><it>Stile</it><pl>Styl</pl><es>Estilo</es><ea>Estilo</ea><pt>Estilo</pt><br>Estilo</br><ru>Стиль</ru><uk>Стиль</uk><cz>Styl</cz><hu>Stílus</hu><ro>Stil</ro><tr>Stil</tr><fi>Tyyli</fi><no>Stil</no><sv>Stil</sv><da>Stil</da><kr>스타일</kr><jp>スタイル</jp><ct>樣式</ct><fc>样式</fc><id>Gaya</id><vi>Kiểu</vi>
+        </text>
+        <text name="lco_scheme_auto">
+            <en>Auto</en><de>Auto</de><fr>Auto</fr><nl>Auto</nl><it>Auto</it><pl>Auto</pl><es>Auto</es><ea>Auto</ea><pt>Auto</pt><br>Auto</br><ru>Авто</ru><uk>Авто</uk><cz>Auto</cz><hu>Auto</hu><ro>Auto</ro><tr>Otomatik</tr><fi>Auto</fi><no>Auto</no><sv>Auto</sv><da>Auto</da><kr>자동</kr><jp>自動</jp><ct>自動</ct><fc>自动</fc><id>Otomatis</id><vi>Tự động</vi>
+        </text>
+        <text name="lco_scheme_modern">
+            <en>Modern</en><de>Modern</de><fr>Moderne</fr><nl>Modern</nl><it>Moderno</it><pl>Nowoczesny</pl><es>Moderno</es><ea>Moderno</ea><pt>Moderno</pt><br>Moderno</br><ru>Современный</ru><uk>Сучасний</uk><cz>Moderní</cz><hu>Modern</hu><ro>Modern</ro><tr>Modern</tr><fi>Moderni</fi><no>Moderne</no><sv>Modern</sv><da>Moderne</da><kr>모던</kr><jp>モダン</jp><ct>現代</ct><fc>现代</fc><id>Modern</id><vi>Hiện đại</vi>
+        </text>
+        <text name="lco_scheme_classic">
+            <en>Classic</en><de>Klassisch</de><fr>Classique</fr><nl>Klassiek</nl><it>Classico</it><pl>Klasyczny</pl><es>Clásico</es><ea>Clásico</ea><pt>Clássico</pt><br>Clássico</br><ru>Классический</ru><uk>Класичний</uk><cz>Klasický</cz><hu>Klasszikus</hu><ro>Clasic</ro><tr>Klasik</tr><fi>Klassinen</fi><no>Klassisk</no><sv>Klassisk</sv><da>Klassisk</da><kr>클래식</kr><jp>クラシック</jp><ct>經典</ct><fc>经典</fc><id>Klasik</id><vi>Cổ điển</vi>
+        </text>
+        <text name="lco_scheme_alt">
+            <en>Paddle</en><de>Paddel</de><fr>Palette</fr><nl>Paddle</nl><it>Paletta</it><pl>Manetka</pl><es>Paleta</es><ea>Paleta</ea><pt>Patilha</pt><br>Manete</br><ru>Клавиша</ru><uk>Клавіша</uk><cz>Pádlo</cz><hu>Lapát</hu><ro>Paletă</ro><tr>Palet</tr><fi>Mela</fi><no>Padle</no><sv>Paddel</sv><da>Paddel</da><kr>패들</kr><jp>パドル</jp><ct>撥桿</ct><fc>拨杆</fc><id>Paddle</id><vi>Bàn đạp</vi>
+        </text>
+    </l10n>
+</modDesc>
