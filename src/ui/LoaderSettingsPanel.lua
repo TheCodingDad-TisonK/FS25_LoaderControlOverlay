@@ -27,7 +27,7 @@ end
 
 -- ── Panel geometry (normalized, Y=0 at bottom) ───────────
 local PW    = 0.44
-local PH    = 0.60
+local PH    = 0.68
 local PX    = (1 - PW) / 2
 local PY    = (1 - PH) / 2
 
@@ -35,8 +35,8 @@ local TB_H  = 0.050
 local IB_H  = 0.040
 local PAD   = 0.020
 
-local ROW_H     = 0.044
-local SEC_H     = 0.030
+local ROW_H     = 0.042
+local SEC_H     = 0.028
 local TOGGLE_W  = 0.050
 local TOGGLE_H  = 0.028
 local TOGGLE_GAP = 0.004
@@ -328,7 +328,7 @@ function LCOSettingsPanel:drawRow(x, y, w, item, rowIdx)
     end
 
     self:drawText(x + 0.006, y + ROW_H * 0.55, TS_BODY, tr(item.label, item.lf), C.white, RenderText.ALIGN_LEFT, true)
-    self:drawText(x + 0.006, y + ROW_H * 0.16, TS_TINY, item.desc, C.dim, RenderText.ALIGN_LEFT, false)
+    self:drawText(x + 0.006, y + ROW_H * 0.16, TS_TINY, tr("lco_desc_" .. item.id, item.desc), C.dim, RenderText.ALIGN_LEFT, false)
 
     local ctrlX = x + w - 0.010
     local ctrlY = y + (ROW_H - TOGGLE_H) / 2
