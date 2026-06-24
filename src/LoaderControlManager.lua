@@ -25,6 +25,7 @@ function LCOManager.new(mission, modDirectory, modName)
 
     self.detector = LCOLoaderDetector.new()
     self.hud      = LCOLoaderHUD.new(self.settings)
+    self.panel    = LCOSettingsPanel.new(self.settings)
 
     -- input event id bookkeeping
     self._eventIds = {}
@@ -40,6 +41,7 @@ function LCOManager:onMissionLoaded()
 end
 
 function LCOManager:update(dt)
+    if self.panel then self.panel:update() end
     if not self.settings.enabled then
         -- still fade the HUD out cleanly
         self.hud:setState(self.detector.state)
@@ -53,6 +55,7 @@ end
 
 function LCOManager:draw()
     self.hud:draw()
+    if self.panel then self.panel:draw() end
 end
 
 function LCOManager:delete()
@@ -62,6 +65,7 @@ function LCOManager:delete()
         self._vehicleHookOriginal = nil
     end
     if self.hud then self.hud:delete() end
+    if self.panel then self.panel:delete() end
     LCOLogger.info("Manager deleted")
 end
 
@@ -92,6 +96,7 @@ function LCOManager:registerVehicleActions(binding)
     reg("LCO_EDIT_OVERLAY",   self.onEditOverlay)
     reg("LCO_CYCLE_SCHEME",   self.onCycleScheme)
     reg("LCO_CYCLE_POSITION", self.onCyclePosition)
+    reg("LCO_OPEN_SETTINGS",  self.onOpenSettings)
 end
 
 function LCOManager:installInputHooks()
@@ -165,8 +170,17 @@ function LCOManager:onCyclePosition()
     self.hud:applyLayoutFromSettings()
 end
 
--- ── Mouse routing (edit mode) ────────────────────────────
+function LCOManager:onOpenSettings()
+    if self.panel then self.panel:toggle() end
+end
+
+-- ── Mouse routing ────────────────────────────────────────
+-- The settings panel eats input first when it is open; otherwise the
+-- HUD handles drag/resize in edit mode.
 function LCOManager:onMouseEvent(posX, posY, isDown, isUp, button)
+    if self.panel and self.panel:isOpen() then
+        return self.panel:onMouseEvent(posX, posY, isDown, isUp, button)
+    end
     return self.hud:onMouseEvent(posX, posY, isDown, isUp, button)
 end
 

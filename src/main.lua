@@ -22,6 +22,7 @@ source(modDirectory .. "src/settings/Settings.lua")
 source(modDirectory .. "src/core/LoaderDetector.lua")
 source(modDirectory .. "src/ui/ControlScheme.lua")
 source(modDirectory .. "src/ui/LoaderHUD.lua")
+source(modDirectory .. "src/ui/LoaderSettingsPanel.lua")
 source(modDirectory .. "src/LoaderControlManager.lua")
 
 local mgr = nil
@@ -135,6 +136,12 @@ function LCO_CONSOLE:reset()
     return "settings reset to defaults"
 end
 
+function LCO_CONSOLE:settings()
+    if not g_LoaderControlManager or not g_LoaderControlManager.panel then return "not initialized" end
+    g_LoaderControlManager.panel:toggle()
+    return "settings panel toggled"
+end
+
 addConsoleCommand("loaderControl",       "Loader Control Overlay: list commands", "help",   LCO_CONSOLE)
 addConsoleCommand("loaderControlStatus", "Loader Control Overlay: show state",     "status", LCO_CONSOLE)
 addConsoleCommand("loaderControlToggle", "Loader Control Overlay: show/hide",      "toggle", LCO_CONSOLE)
@@ -142,6 +149,7 @@ addConsoleCommand("loaderControlScheme", "Loader Control Overlay: set style 0-3"
 addConsoleCommand("loaderControlScale",  "Loader Control Overlay: set scale",      "scale",  LCO_CONSOLE)
 addConsoleCommand("loaderControlDebug",  "Loader Control Overlay: toggle debug",   "debug",  LCO_CONSOLE)
 addConsoleCommand("loaderControlReset",  "Loader Control Overlay: reset settings", "reset",  LCO_CONSOLE)
+addConsoleCommand("loaderControlSettings", "Loader Control Overlay: open settings panel", "settings", LCO_CONSOLE)
 
 print("========================================")
 print("  FS25 Loader Control Overlay LOADED")
