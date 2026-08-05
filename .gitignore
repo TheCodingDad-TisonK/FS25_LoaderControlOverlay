@@ -10,3 +10,6 @@ Thumbs.db
 
 # Icon working file (only the final icon.dds is shipped)
 icon_source.png
+
+# Pre-commit gate deps (tools/test/ - installed by npm, never shipped)
+node_modules/
