@@ -2,6 +2,11 @@
 
 All notable changes to FS25 Loader Control Overlay are documented here.
 
+## [1.0.1.0] - 2026-08-26
+
+- Settings panel (Alt+O) sizing fixed so nothing clips, and the Alt+O binding now works in the on-foot context too.
+- Full 26-language localization for the settings panel.
+
 ## [1.0.0.0] - Initial release
 
 - Live front-loader control overlay that reads the loader's moving tools each frame
